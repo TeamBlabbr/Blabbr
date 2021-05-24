@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background: #435dee;
+  overflow: hidden;
+  font-family: 'Poppins';
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+@keyframes scale {
+  0% {
+    transform: rotateZ(0deg)
+  }
+
+  0% {
+    transform: rotateZ(360deg)
+  }
+}
+
+.tilt {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  -webkit-transform: perspective(700px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+          transform: perspective(700px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 100vw;
+  will-change: transform;
+}
+
+.text {
+  color: #eee;
+  font-size: 150px;
+  -webkit-transform: translateZ(80px);
+          transform: translateZ(80px);
+  font-family: 'Montserrat';
+  font-weight: 600;
+  text-shadow: (5px, 5px, 20px, #222);
+}
+
+.text1 {
+  color: #fff
+}
+
+.tilt img:nth-child(1) {
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-500px),
+             translateY(-200px);
+}
+
+.tilt img {
+  position: absolute;
+}
+
+.tilt img.two {
+  position: absolute;
+  z-index: -1;
+  transform: translate(500px, 200px);
+  -moz-animation: scale 3s ;
+  -webkit-animation: scale 3s ;
+  -o-animation: scale 3s ;
+  animation: scale 3s ;
+}
+
+.tilt img.three {
+  position: absolute;
+  z-index: -1;
+  transform: translate(-200px, 400px);
+  -moz-animation: scale 3s ;
+  -webkit-animation: scale 3s ;
+  -o-animation: scale 3s ;
+  animation: scale 3s ;
+}
+
+
+.tilt img.four {
+  position: absolute;
+  z-index: -1;
+  transform: translate(500px, -200px);
+  -moz-animation: scale 3s ;
+  -webkit-animation: scale 3s ;
+  -o-animation: scale 3s ;
+  animation: scale 3s ;
+}

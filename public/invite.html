@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head><link rel="icon" href="images/Favicon.svg">
+				<!-- Meta Tags -->
+        <meta property="og:url"           content="https://Blabbr.teamdroplet.repl.co" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Blabbr" />
+        <meta property="og:description"   content="Welcome to the next generation of chatting. Fast, easy-to-use, secure, and real-time,  Blabbr is the next generation of chatting." />
+        <meta property="og:image"         content="https://Blabbr.teamdroplet.repl.co/public/images/Blabbr.svg" />
+
+		<link rel="stylesheet" href="css/join.css" />
+		<title>Blabbr - Invite</title>
+	</head>
+	<body>
+    <!-- Preloader --> 
+  <div class="preloader">
+
+    <div class="image">
+      <center>
+      <img src="images/blabbr.svg" alt="spinner" id="logo-loader">
+      </center>
+    </div>
+    
+  </div>
+
+
+  <center>
+  <div class="join">
+    <header class="join-header">
+      <img src="images/blabbr.svg" class="blabbr-logo">
+    </header>
+    <br><br><br><br><br><br><br><br><br><br>
+    <h1 id="title">Join Room <div class="roomid"></div></h1>
+    <br>
+    <main class="join-main">
+      <form action="chat">
+        <div class="form-control">
+          <input
+            type="text" 
+            name="username" 
+            id="username"
+            placeholder="Username"
+            style="padding: 15px 20px;"
+            required
+          />
+        </div>
+
+        <div class="form-control">
+          <input
+            type="text" 
+            name="room" 
+            id="room"
+            placeholder="room"
+            style="padding: 15px 20px;"
+            required
+          />
+        </div>
+
+            <br>
+
+        <button
+          type="submit" 
+          class="btn"
+          id="mesfs"
+          onclick="setroom();"
+          style="font-size: 15px;"
+          >Join</button>
+      </form>
+    </main>
+  </div>
+
+  </center>
+
+  
+<script src="js/load.js"></script>
+<script src="js/invite.js"></script>
+				</body>
+			</main>
+		</div>
+</html>
