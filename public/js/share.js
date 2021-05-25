@@ -2,15 +2,15 @@
 
 let room = document.getElementById('room-name').textContent;
 
-let link = "https:\/\/Orbit.teamdroplet.repl.co"
+let link = "https:\/\/blabbr.repl.co"
 
 
 function mail (){
-  window.open("mailto:?subject=Join my Orbit room!&body=Join my Orbit room! "+link+" I'm in room \""+room+'""');
+  window.open("mailto:?subject=Join my Blabbr room!&body=Join my Blabbr room! "+link+" I'm in room \""+room+'""');
 }
 
 function tweet (){
-  window.open("https://twitter.com/intent/tweet?url="+link+"&text=Join my Orbit room! I'm in room \""+room+'""');
+  window.open("https://twitter.com/intent/tweet?url="+link+"&text=Join my Blabbr room! I'm in room \""+room+'""');
 }
 
 function face (){
