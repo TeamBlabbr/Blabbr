@@ -2,31 +2,70 @@
 <html lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YZ6015TN2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YZ6015TN2');
+</script>
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+
 	<link rel="icon" href="images/Favicon.svg">
 	<!-- Meta Tags -->
-	<meta property="og:url" content="https://Blabbr.teamdroplet.repl.co" />
+	<meta property="og:url" content="https://blabbr.xyz" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Blabbr" />
-	<meta property="og:description" content="Welcome to the next generation of chatting. Fast, easy-to-use, secure, and real-time, Blabbr is the next generation of chatting."
+	<meta property="og:description" content="Welcome to the next generation of chatting. Fast, easy-to-use, secure, and real-time,  Blabbr is the next generation of chatting."
 	/>
-	<meta property="og:image" content="https://Blabbr.teamdroplet.repl.co/public/images/Blabbr.svg" />
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="google-site-verification" content="AJJivyeGohGy3y3kT_6F-Zu1htdkdfVoL3JHw36g4Pk" />
+	<meta property="og:image" content="https://Blabbr.xyz/images/Blabbr.svg" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 	 crossorigin="anonymous" />
 	<link rel="stylesheet" href="css/chat.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
-	</script>
+	</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/modal.css">
+
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 	<title>Blabbr - Chat</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+	<!-- The Modal -->
+<center>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="default">
+      <h1>Welcome Back to Blabbr!</h1>
+
+      <h2>Don't forget: if you need help, send the message '/help' in the chat. Or you can find more info in our <a href="//docs.blabbr.xyz">API docs</a></h2>
+    </div>
+		<div id='firstt' class="firsttime">
+      <h1>Welcome to Blabbr!</h1>
+      <h2>Looks like its is your first time here! Send the message '/help' in the chat to get a list of all commands and extra information. You can find more information in our our <a href="//docs.blabbr.xyz" target="_blank">API Docs</a>.</h2>
+    </div>
+    <h2>Invite friends!</h2>
+		<h3>Invite Link:</h3>
+    <input type="text" name="invite" id="invite-link" value="Loading..." placeholder="Your invite link!">
+
+  </div>
+
+</div></center>
 </head>
 
 
 <body>
+
+
+
+
+
 	<!-- Preloader -->
 	<div class="preloader">
 
@@ -39,13 +78,21 @@
   </div>
 
 
+
+
+
+
 	<div class="chat-container">
 		<header class="chat-header">
 			<a href="#"><img src="images/blabbr.svg" alt="Blabbr"></a>
-      <h4 id="room-name"></h4>
+      <h4 id="room-name">Loading...</h4>
 
       <div class="exit">
           <a class="exitbtn" href="/join">Exit Room</a>
+        </div>
+
+      <div class="meet">
+          <a class="meet" onclick="videoChat();"><span class="material-icons">videocam</span></a> <!-- WHY CANT THE STUPID THING JUST WOKR -->
         </div>
 
         <div class="users">
@@ -72,38 +119,24 @@
             style="padding:15px"
             id="msg"
             type="text"
-            placeholder="Enter Message"
+            placeholder="Enter message.."
             required
             autocomplete="off"
             maxlength="150"
           />
-          <button id='mesfes' onclick='messagesinchat = messagesinchat + 1;' class="button1"><span class="material-icons">send</span></button>
+          <button id='mesfes' class="button1"><span class="material-icons">send</span></button>
         </form>
+        
       </div>
-
-      <div class="menu">
-  <div class="modal-container" id="modal_container">
-    <div class="modal"> <!-- we don't need room -->
-      <h1>Change your username</h1>
-		<form action="https://Blabbr.teamblabbr.repl.co/chat"></form>
-      <input 
-        type="text"
-        id="rename"
-        placeholder="New Username"
-				for='username'
-        style="padding: 15px 20px;"
-        >
-        <br><br>
-
-      <button type="submit" id="submit">
-        Change
-      </button>
-    </div>
-  </div>
-</div>
 
       
     </div>
+
+<script>
+	function videoChat(){
+		window.open('https://meet.blabbr.xyz/'+room)
+	}
+</script>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js" integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
 
@@ -114,15 +147,8 @@
    <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
     <script src="js/load.js"></script>
-    <script src="js/typing.js"></script>
     <script src="js/chat.js"></script>
-		<script> 
-function pwom(){ 
-	let roomx = document.getElementById('room-name').textContent;
-	var person = prompt("Please enter your new name",+user.username); // user will be replaced with user.username
-	window.location = ('https://Blabbr.teamblabbr.repl.co/chat?username='+person+'&room='+roomx);
-}
-</script>
+    <script src="https://blabbr.xyz/banned_names.js"></script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CW4SBVJE"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'G-C9CW4SBVJE'); </script> </body>
+ </body>
 </html>

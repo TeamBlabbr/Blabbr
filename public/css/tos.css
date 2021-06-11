@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+	font-family: Poppins;
+}
+
+:root {
+  --dark: #435dee;
+  --light-1: #fff;
+  --light-2: #eee;
+  --text-color-1: #222;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0px 2px #DDD;
+  z-index: 5;
+}
+
+.search {
+  padding: 10px;
+  border-radius: 14px;
+  transform: translateY(-7px);
+  margin-left: 10px;
+  border: none;
+  background-color: #eee;
+  width: 10000px;
+}
+
+.search:focus{
+  outline: none;
+}
+
+.search::placeholder {
+  color: #ccc;
+}
+
+.main {
+  font-family: 'Montserrat';
+  color: var(--dark);
+  font-weight: bold;
+  text-shadow: 0px 0px 5px var(--dark);
+  padding-left: 20px;
+}
+
+h1 {
+  font-family: 'Montserrat';
+  color: #aaa;
+  margin-right: 3px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+
+code {
+    background: rgba(223, 223, 223, 0.349);
+    border-radius: 5px;
+    border-left: 5px solid var(--dark);
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 99%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    width: 99%;
+    margin: auto;
+    display: block;
+    word-wrap: break-word;
+}
+
+
+.container {
+  background: rgba(216, 216, 216, 0.384);
+  width: 80%;
+  right: 0;
+  position: absolute;
+}
+
+.container * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.show{
+	display: block;
+}
+
+.hide{
+	display: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #435dee;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #435dee88;
+}
+
+.border {
+  width: 90%;
+  background-color: var(--dark);
+  box-shadow: 0px 0px 5px var(--dark);
+  height: 2px;
+}
+
+.container a{
+  padding: 0;
+}
+
+.container i{
+  padding: 0;
+}
+
+.container u{
+  padding: 0;
+}

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><link rel="icon" href="images/Favicon.svg">
+	<head>
+    <link rel="icon" href="images/favicon.svg">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YZ6015TN2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YZ6015TN2');
+</script>
 				<!-- Meta Tags -->
         <meta property="og:url"           content="https://Blabbr.teamdroplet.repl.co" />
         <meta property="og:type"          content="website" />
@@ -9,6 +19,9 @@
         <meta property="og:image"         content="https://Blabbr.teamdroplet.repl.co/public/images/Blabbr.svg" />
 
 		<link rel="stylesheet" href="css/join.css" />
+
+    <script data-ad-client="ca-pub-9677714446396060" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
 		<title>Blabbr - Join Room</title>
 	</head>
 	<body>
@@ -17,7 +30,7 @@
 
     <div class="image">
       <center>
-      <img src="images/blabbr.svg" alt="spinner" id="logo-loader">
+      <img src="images/blabbr loading.svg" alt="spinner" id="logo-loader">
       </center>
     </div>
     
@@ -31,7 +44,8 @@
     </header>
     <br><br><br><br><br><br><br><br><br><br>
     <h1>Join A Room</h1>
-    <br>
+    
+		<div id="invaliDiv"></div> <br>
     <main class="join-main">
       <form action="chat">
         <div class="form-control">
@@ -71,6 +85,20 @@
 
   </center>
 
+<script>
+
+let urlParaz = new URLSearchParams(window.location.search);
+if (urlParaz.get('invalid') !== null){
+	window.onload = function(){
+		var div = document.getElementById('invaliDiv')
+  	var invalidtext = document.createElement("H3");
+  	invalidtext.innerHTML = "Invalid name, choose another.";
+  	invalidtext.classList.add("invalidname");
+  	div.appendChild(invalidtext);
+	}
+}
+
+</script>
 <script src="js/load.js"></script>
 				<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CW4SBVJE"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'G-C9CW4SBVJE'); </script> </body>
 			</main>

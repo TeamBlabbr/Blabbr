@@ -95,6 +95,8 @@ input:focus {
   justify-content: center;
   align-items: center;
   visibility: visible;
+  top: 0;
+  left: 0;
 }
 
 .preloader img {
@@ -119,4 +121,10 @@ input:focus {
   100% {
     transform: translateY(100%);
   }
+}
+
+.invalidname{
+	color: rgb(157, 34, 34);
+	font-family: Poppins;
+	font-size: 1.2vw;
 }

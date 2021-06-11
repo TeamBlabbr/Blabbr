@@ -39,12 +39,7 @@ html, body {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
-  z-index: 10;
-}
-
-#skew2 {
-  background: #fff;
-  z-index: 9;
+  z-index: -1;
 }
 
 .cus-div:after {
@@ -118,7 +113,7 @@ p {
   font-size: 20px;
   color: var(--light-1);
   font-weight: 500;
-  font-family: 'Poppins';
+  font-famiy: 'Poppins';
   text-align: center;
   width: 100%;
 }
@@ -126,10 +121,10 @@ p {
 .image-placeholder {
   width: 90%;
   height: 60vw;
-  z-index: 150;
   margin: auto;
   position: relative;
   transform: translateY(-100px);
+  z-index: 1;
 
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
@@ -189,8 +184,22 @@ p {
   background-color: #171920;
 }
 
+.nav {
+  background: #3a50cf00;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  height: 80px;
+  opacity: 1;
+  transition: background 0.3s;
+}
+
+.nav.active {
+  background: #3e57e4;
+}
+
 .nav img {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 40px;
@@ -199,7 +208,7 @@ p {
 }
 
 .nav .signup {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 70px;
@@ -216,8 +225,78 @@ p {
   z-index: 30;
 }
 
-.nav .contact {
+
+.mobile .menu {
+  height: 100%;
+}
+
+.mobile .material-icons {
   position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  padding: 10px;
+  text-decoration: none;
+  color: #eee;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  text-align: center;
+  z-index: 35;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile .menu.active {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100px;
+  background-color: #3b53d6;
+  z-index: 1000;
+  animation: in 0.3s;
+  animation-fill-mode: forwards;
+  padding: 30px;
+}
+
+.mobile .menu {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100px;
+  background-color: #3b53d6;
+  z-index: 1000;
+  animation: out 0.3s;
+  animation-fill-mode: forwards;
+  padding: 30px;
+}
+
+@keyframes in {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%)
+  }
+}
+
+@keyframes out {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%)
+  }
+}
+
+.nav .contact {
+  position: fixed;
   top: 0;
   right: 100px;
   width: 70px;
@@ -232,7 +311,7 @@ p {
 }
 
 .nav .about {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 200px;
   width: 70px;
@@ -246,8 +325,8 @@ p {
   z-index: 30;
 }
 
-.nav a:nth-child(4) {
-  position: absolute;
+.nav .home {
+  position: fixed;
   top: 0;
   right: 300px;
   width: 70px;
@@ -261,9 +340,23 @@ p {
   z-index: 30;
 }
 
+.mobile .linkstwo {
+  display: inline-block;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  height: 100%;
+}
+
+.mobile .linkstwo a {
+  color: #eee;
+  margin: 10px 10px;
+}
+
 .nav .links a:hover {
   opacity: 0.3;
 }
+
 
 .nav .links a {
   text-decoration: none;
@@ -334,6 +427,13 @@ p {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .links {
+    display: none;
   }
 }
 
@@ -415,7 +515,7 @@ p {
   font-size: 50px;
 }
 
-.btn {
+.joinbuttonn {
   display: grid;
   margin: 30px;
   padding: 15px 50px;
@@ -423,9 +523,22 @@ p {
   border-radius: 50px;
   cursor: pointer;
   font-family: 'Poppins';
+  text-decoration: none;
 }
 
-a .btn{
-	text-decoration: none;
-	color:black;
+.parallax .box {
+  width: 200px;
+  height: 200px;
+  background: #222;
+  display: block;
+}
+
+.parallax {
+  width: 100%;
+  height: 100%;
+}
+
+
+.meet{
+	
 }

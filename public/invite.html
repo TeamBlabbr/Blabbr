@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><link rel="icon" href="images/Favicon.svg">
-				<!-- Meta Tags -->
-        <meta property="og:url"           content="https://Blabbr.teamdroplet.repl.co" />
-        <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Blabbr" />
-        <meta property="og:description"   content="Welcome to the next generation of chatting. Fast, easy-to-use, secure, and real-time,  Blabbr is the next generation of chatting." />
-        <meta property="og:image"         content="https://Blabbr.teamdroplet.repl.co/public/images/Blabbr.svg" />
+	<head>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YZ6015TN2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YZ6015TN2');
+</script>
+	<!-- Meta Tags -->
+	<meta property="og:url" content="https://blabbr.xyz" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="You were invited to a Blabbr room! - Blabbr" />
+	<meta property="og:description" content="Welcome to the next generation of chatting. Fast, easy-to-use, secure, and real-time,  Blabbr is the next generation of chatting."
+	/>
+	<meta name="google-site-verification" content="AJJivyeGohGy3y3kT_6F-Zu1htdkdfVoL3JHw36g4Pk" />
+	<meta property="og:image" content="https://Blabbr.xyz/images/Blabbr.svg" />
 
 		<link rel="stylesheet" href="css/join.css" />
+    <script data-ad-client="ca-pub-9677714446396060" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script src="//blabbr.xyz/apith.js"></script>
 		<title>Blabbr - Invite</title>
 	</head>
 	<body>
@@ -17,7 +30,7 @@
 
     <div class="image">
       <center>
-      <img src="images/blabbr.svg" alt="spinner" id="logo-loader">
+      <img src="images/blabbr loading.svg" alt="spinner" id="logo-loader">
       </center>
     </div>
     
@@ -30,7 +43,7 @@
       <img src="images/blabbr.svg" class="blabbr-logo">
     </header>
     <br><br><br><br><br><br><br><br><br><br>
-    <h1 id="title">Join Room <div class="roomid"></div></h1>
+    <h1 id="title">Join Room <div id='roomn' class="roomid">room</div></h1>
     <br>
     <main class="join-main">
       <form action="chat">
@@ -49,9 +62,9 @@
           <input
             type="text" 
             name="room" 
-            id="room"
+            id="roomname"
             placeholder="room"
-            style="padding: 15px 20px;"
+            style="display: none;"
             required
           />
         </div>
@@ -62,7 +75,6 @@
           type="submit" 
           class="btn"
           id="mesfs"
-          onclick="setroom();"
           style="font-size: 15px;"
           >Join</button>
       </form>
@@ -73,8 +85,9 @@
 
   
 <script src="js/load.js"></script>
-<script src="js/invite.js"></script>
-				<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CW4SBVJE"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'G-C9CW4SBVJE'); </script> </body>
+<script src="js/urlparams.js"></script>
 			</main>
 		</div>
+  </body>
 </html>
+

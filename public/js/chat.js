@@ -1,53 +1,42 @@
 // imports and variables
 const open = document.getElementById('open');
-const modal_container = document.getElementById('modal_container');
-const enter = document.getElementById('submit');
-const rename = document.getElementById('rename').value;
-
+const exit = document.getElementById('exit');
 // chat commands
 
 // Sets title to room name
 function myFunction() {
-  document.title = "Blabbr - "+room;
+	document.title = "Blabbr - " + room;
 }
+
+// detects, then displays characters left in an input
+$(document).ready(function() {
+	var len = 0;
+	var maxchar = 150;
+
+	$('.message').keyup(function() {
+		len = this.value.length
+		if (len > maxchar) {
+			return false;
+		}
+		else if (len > 0) {
+			$("#remaining").html((len) + '/150');
+		}
+		else {
+			$("#remaining").html(+(len) + '/150');
+		}
+	})
+});
 
 // Chat Sidebar
-function sidebar(){
-  $('.chat-sidebar').toggleClass(" active");
+function sidebar() {
+	$('.chat-sidebar').toggleClass(" active");
 };
 
-/* Change Username */
-function menuclose(){
-  modal_container.classList.remove('show');
-}
 
-window.onclick = function(event) {
-  if (event.target == modal_container) {
-    menuclose();
-  }
-}
-
-enter.addEventListener('click', function(){
-  console.log(document.getElementById("rename").value)
-
-  window.location = ('https://Blabbr.teamblabbr.repl.co/chat.html?username='+ document.getElementById("rename").value +'&room='+room);
-})
-
-function menuopen(){
-  modal_container.classList.add('show');
-}
-
-
-// Extra stuff
-
-window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CDL2P47523');
 
 
 // Run Scripts
 
 myFunction();
-document.getElementById("rename").value = username;
+
+new ClipboardJS('.copybtn');
